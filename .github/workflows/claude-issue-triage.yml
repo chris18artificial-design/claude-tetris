@@ -60,6 +60,10 @@ jobs:
                  poder resolverlo (pasos para reproducir, navegador, etc.), si aplica.
                - No implementes ningún cambio de código ni abras un PR: este workflow es
                  solo de triage/diagnóstico.
+               El comentario debe estar redactado en formato Markdown válido y bien
+               interpretable por GitHub (encabezados, listas, bloques de código con
+               triple backtick y el lenguaje indicado, negritas, etc.), evitando texto
+               plano sin estructura.
 
             No comentes ni modifiques ningún otro issue o pull request distinto al
             número ${{ github.event.issue.number }}.
