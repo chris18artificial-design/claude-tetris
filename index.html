@@ -51,6 +51,34 @@
         <button id="restart-btn">Reiniciar</button>
       </div>
     </div>
+
+    <div id="start-screen" class="overlay">
+      <div class="overlay-box start-box">
+        <p class="start-title">TETRIS</p>
+        <div class="records-panel">
+          <h2 class="records-heading">RÉCORDS</h2>
+          <table class="records-table">
+            <thead>
+              <tr><th>#</th><th>Nombre</th><th>Puntos</th><th>Líneas</th><th>Nivel</th></tr>
+            </thead>
+            <tbody id="start-records-body"></tbody>
+          </table>
+          <div class="records-stats">
+            <span>Mejor combo: <strong id="start-best-combo">0</strong></span>
+            <span>Líneas máximas: <strong id="start-max-lines">0</strong></span>
+          </div>
+          <div class="records-actions">
+            <button id="reset-records-btn" class="danger-btn">Borrar récords</button>
+            <div id="reset-confirm" class="hidden reset-confirm">
+              <span>¿Borrar todos los récords?</span>
+              <button id="reset-confirm-yes">Sí, borrar</button>
+              <button id="reset-confirm-no">Cancelar</button>
+            </div>
+          </div>
+        </div>
+        <button id="play-btn">Jugar</button>
+      </div>
+    </div>
   </div>
 
   <script src="game.js"></script>

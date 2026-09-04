@@ -160,3 +160,209 @@ kbd {
 #restart-btn:hover {
   background: #9bbdff;
 }
+
+/* ---- Records ---- */
+
+.start-box {
+  max-width: 340px;
+}
+
+.start-title {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 6px;
+  color: #7aa2f7;
+}
+
+.records-panel {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.records-heading {
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #555570;
+  font-weight: 700;
+}
+
+.records-table {
+  border-collapse: collapse;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 12px;
+  min-width: 260px;
+  max-width: 100%;
+}
+
+.records-table th,
+.records-table td {
+  padding: 4px 8px;
+  text-align: center;
+  color: #ccccdd;
+}
+
+.records-table thead th {
+  color: #555570;
+  font-size: 10px;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #2a2a3a;
+}
+
+.records-table tbody tr:nth-child(odd) {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.records-empty {
+  color: #666;
+  font-style: italic;
+  padding: 10px !important;
+}
+
+.record-new {
+  background: rgba(122, 162, 247, 0.28) !important;
+  color: #fff;
+  box-shadow: inset 0 0 0 1px #7aa2f7;
+}
+
+.records-stats {
+  display: flex;
+  gap: 16px;
+  font-size: 12px;
+  color: #888;
+}
+
+.records-stats strong {
+  color: #7aa2f7;
+}
+
+.records-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+#reset-records-btn.hidden {
+  display: none;
+}
+
+.danger-btn {
+  background: transparent;
+  color: #e57373;
+  border: 1px solid #e57373;
+  border-radius: 6px;
+  padding: 6px 16px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: background 0.15s, color 0.15s;
+}
+
+.danger-btn:hover {
+  background: #e57373;
+  color: #0f0f17;
+}
+
+.reset-confirm {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #ccc;
+}
+
+.reset-confirm.hidden {
+  display: none;
+}
+
+.reset-confirm button {
+  background: #2a2a3a;
+  color: #e0e0e0;
+  border: 1px solid #3a3a5a;
+  border-radius: 4px;
+  padding: 4px 10px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+#reset-confirm-yes {
+  background: #e57373;
+  color: #0f0f17;
+  border-color: #e57373;
+}
+
+#play-btn {
+  margin-top: 4px;
+  background: #7aa2f7;
+  color: #0f0f17;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 32px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: background 0.15s;
+}
+
+#play-btn:hover {
+  background: #9bbdff;
+}
+
+#name-entry {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 13px;
+  color: #ffd54f;
+}
+
+#name-entry.hidden {
+  display: none;
+}
+
+#player-name-input {
+  background: #1a1a25;
+  border: 1px solid #3a3a5a;
+  border-radius: 4px;
+  padding: 6px 10px;
+  color: #e0e0e0;
+  font-size: 13px;
+  text-align: center;
+  width: 160px;
+}
+
+#save-record-btn {
+  background: #81c784;
+  color: #0f0f17;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 20px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* #records-gameover vive dentro de #overlay, que también se usa para la pantalla
+   de pausa (de otro agente). Solo debe mostrarse cuando el overlay está marcado
+   explícitamente como game-over-overlay (ver endGame()/init() en game.js), para
+   no filtrarse a la pantalla de pausa. */
+#records-gameover {
+  display: none;
+}
+
+.game-over-overlay #records-gameover {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  max-height: 260px;
+  overflow-y: auto;
+}
