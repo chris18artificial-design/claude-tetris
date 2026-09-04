@@ -160,3 +160,43 @@ kbd {
 #restart-btn:hover {
   background: #9bbdff;
 }
+
+/* ---- Skins ---- */
+#skin-select {
+  background: #22223a;
+  border: 1px solid #3a3a5a;
+  border-radius: 4px;
+  padding: 6px 8px;
+  font-size: 12px;
+  font-family: inherit;
+  color: #ddd;
+  cursor: pointer;
+}
+
+#skin-select:focus {
+  outline: 1px solid #7aa2f7;
+}
+
+body[data-skin="neon"] {
+  background: #000;
+}
+
+body[data-skin="neon"] #board,
+body[data-skin="neon"] #next-canvas {
+  background: #050505;
+  border-color: #00e5ff;
+  box-shadow: 0 0 30px rgba(0, 229, 255, 0.35);
+}
+
+body[data-skin="pastel"] #board,
+body[data-skin="pastel"] #next-canvas {
+  background: #2b2a38;
+  border-color: #4a4560;
+}
+
+body[data-skin="pixel"] #board,
+body[data-skin="pixel"] #next-canvas {
+  background: #14141c;
+  border-color: #3a3a4a;
+  image-rendering: pixelated;
+}
